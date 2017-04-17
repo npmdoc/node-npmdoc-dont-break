@@ -1,0 +1,474 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/bahmutov/dont-break"
+
+    >dont-break (v1.3.0)</a>
+</h1>
+<h4>Checks if the current version of your package would break dependent projects</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dont-break">module dont-break</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dont-break.dont-break">
+            function <span class="apidocSignatureSpan"></span>dont-break
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dont-break.banner">
+            function <span class="apidocSignatureSpan">dont-break.</span>banner
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dont-break.dont_break">
+            function <span class="apidocSignatureSpan">dont-break.</span>dont_break
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dont-break.install_dependency">
+            function <span class="apidocSignatureSpan">dont-break.</span>install_dependency
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dont-break.is_repo_url">
+            function <span class="apidocSignatureSpan">dont-break.</span>is_repo_url
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dont-break.toString">
+            function <span class="apidocSignatureSpan">dont-break.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dont-break.banner">module dont-break.banner</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dont-break.banner.banner">
+            function <span class="apidocSignatureSpan">dont-break.</span>banner
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dont-break.install_dependency">module dont-break.install_dependency</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dont-break.install_dependency.install_dependency">
+            function <span class="apidocSignatureSpan">dont-break.</span>install_dependency
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dont-break.is_repo_url">module dont-break.is_repo_url</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dont-break.is_repo_url.is_repo_url">
+            function <span class="apidocSignatureSpan">dont-break.</span>is_repo_url
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.dont-break.toString">module dont-break.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.dont-break.toString.toString">
+            function <span class="apidocSignatureSpan">dont-break.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dont-break" id="apidoc.module.dont-break">module dont-break</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dont-break.dont-break" id="apidoc.element.dont-break.dont-break">
+        function <span class="apidocSignatureSpan"></span>dont-break
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dontBreak(options) {
+  if (check.unemptyString(options)) {
+    options = {
+      folder: options
+    }
+  }
+  options = options || {}
+  options.folder = options.folder || process.cwd()
+
+  debug(&#x27;working in folder %s&#x27;, options.folder)
+  var start = chdir.to(options.folder)
+
+  if (check.arrayOfStrings(options.dep)) {
+    start = start.then(function () {
+      return options.dep
+    })
+  } else {
+    start = start.then(function () {
+      debug(&#x27;getting dependents&#x27;)
+      return getDependents(options)
+    })
+  }
+
+  var logPass = function logPass () {
+    console.log(&#x27;PASS: Current version does not break dependents&#x27;)
+    return true
+  }
+
+  var logFail = function logFail (err) {
+    console.log(&#x27;FAIL: Current version breaks dependents&#x27;)
+    if (err &#x26;&#x26; err.message) {
+      console.error(&#x27;REPORTED ERROR:&#x27;, err.message)
+      if (err.stack) {
+        console.error(err.stack)
+      }
+    }
+    return false
+  }
+
+  return start
+    .then(_.partial(dontBreakDependents, options))
+    .then(logPass, logFail)
+    .finally(chdir.from)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dont-break.banner" id="apidoc.element.dont-break.banner">
+        function <span class="apidocSignatureSpan">dont-break.</span>banner
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function banner() {
+  var args = _.toArray(arguments)
+  hr(&#x27;=&#x27;)
+  console.log(args.join(&#x27; &#x27;))
+  hr(&#x27;-&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dont-break.dont_break" id="apidoc.element.dont-break.dont_break">
+        function <span class="apidocSignatureSpan">dont-break.</span>dont_break
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dontBreak(options) {
+  if (check.unemptyString(options)) {
+    options = {
+      folder: options
+    }
+  }
+  options = options || {}
+  options.folder = options.folder || process.cwd()
+
+  debug(&#x27;working in folder %s&#x27;, options.folder)
+  var start = chdir.to(options.folder)
+
+  if (check.arrayOfStrings(options.dep)) {
+    start = start.then(function () {
+      return options.dep
+    })
+  } else {
+    start = start.then(function () {
+      debug(&#x27;getting dependents&#x27;)
+      return getDependents(options)
+    })
+  }
+
+  var logPass = function logPass () {
+    console.log(&#x27;PASS: Current version does not break dependents&#x27;)
+    return true
+  }
+
+  var logFail = function logFail (err) {
+    console.log(&#x27;FAIL: Current version breaks dependents&#x27;)
+    if (err &#x26;&#x26; err.message) {
+      console.error(&#x27;REPORTED ERROR:&#x27;, err.message)
+      if (err.stack) {
+        console.error(err.stack)
+      }
+    }
+    return false
+  }
+
+  return start
+    .then(_.partial(dontBreakDependents, options))
+    .then(logPass, logFail)
+    .finally(chdir.from)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dont-break.install_dependency" id="apidoc.element.dont-break.install_dependency">
+        function <span class="apidocSignatureSpan">dont-break.</span>install_dependency
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function install(options) {
+  if (isRepoUrl(options.name)) {
+    debug(&#x27;installing repo %s&#x27;, options.name)
+    removeFolder(options.prefix)
+    return q(cloneRepo({
+      url: options.name,
+      folder: options.prefix
+    })).then(function () {
+      console.log(&#x27;cloned %s&#x27;, options.name)
+    })
+    .then(function () { return chdir.to(options.prefix) })
+    .then(function () {
+      console.log(&#x27;running NPM install in %s&#x27;, process.cwd())
+    })
+    .then(npmInstall)
+    .finally(chdir.from)
+  } else {
+    return q(npmInstall(options))
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dont-break.is_repo_url" id="apidoc.element.dont-break.is_repo_url">
+        function <span class="apidocSignatureSpan">dont-break.</span>is_repo_url
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isRepoUrl(s) {
+  return (is.git(s) || is.url(s)) &#x26;&#x26; isGitHub(s)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.dont-break.toString" id="apidoc.element.dont-break.toString">
+        function <span class="apidocSignatureSpan">dont-break.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dont-break.banner" id="apidoc.module.dont-break.banner">module dont-break.banner</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dont-break.banner.banner" id="apidoc.element.dont-break.banner.banner">
+        function <span class="apidocSignatureSpan">dont-break.</span>banner
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function banner() {
+  var args = _.toArray(arguments)
+  hr(&#x27;=&#x27;)
+  console.log(args.join(&#x27; &#x27;))
+  hr(&#x27;-&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dont-break.install_dependency" id="apidoc.module.dont-break.install_dependency">module dont-break.install_dependency</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dont-break.install_dependency.install_dependency" id="apidoc.element.dont-break.install_dependency.install_dependency">
+        function <span class="apidocSignatureSpan">dont-break.</span>install_dependency
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function install(options) {
+  if (isRepoUrl(options.name)) {
+    debug(&#x27;installing repo %s&#x27;, options.name)
+    removeFolder(options.prefix)
+    return q(cloneRepo({
+      url: options.name,
+      folder: options.prefix
+    })).then(function () {
+      console.log(&#x27;cloned %s&#x27;, options.name)
+    })
+    .then(function () { return chdir.to(options.prefix) })
+    .then(function () {
+      console.log(&#x27;running NPM install in %s&#x27;, process.cwd())
+    })
+    .then(npmInstall)
+    .finally(chdir.from)
+  } else {
+    return q(npmInstall(options))
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dont-break.is_repo_url" id="apidoc.module.dont-break.is_repo_url">module dont-break.is_repo_url</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dont-break.is_repo_url.is_repo_url" id="apidoc.element.dont-break.is_repo_url.is_repo_url">
+        function <span class="apidocSignatureSpan">dont-break.</span>is_repo_url
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isRepoUrl(s) {
+  return (is.git(s) || is.url(s)) &#x26;&#x26; isGitHub(s)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.dont-break.toString" id="apidoc.module.dont-break.toString">module dont-break.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.dont-break.toString.toString" id="apidoc.element.dont-break.toString.toString">
+        function <span class="apidocSignatureSpan">dont-break.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>

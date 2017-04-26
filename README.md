@@ -1,4 +1,7 @@
-# api documentation for  [dont-break (v1.3.0)](https://github.com/bahmutov/dont-break)  [![npm package](https://img.shields.io/npm/v/npmdoc-dont-break.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-dont-break) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-dont-break.svg)](https://travis-ci.org/npmdoc/node-npmdoc-dont-break)
+# npmdoc-dont-break
+
+#### basic api documentation for  [dont-break (v1.3.0)](https://github.com/bahmutov/dont-break)  [![npm package](https://img.shields.io/npm/v/npmdoc-dont-break.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-dont-break) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-dont-break.svg)](https://travis-ci.org/npmdoc/node-npmdoc-dont-break)
+
 #### Checks if the current version of your package would break dependent projects
 
 [![NPM](https://nodei.co/npm/dont-break.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/dont-break)
